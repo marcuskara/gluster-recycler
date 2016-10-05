@@ -26,7 +26,7 @@ parameters:
 - description: 'Source Repo for recycler'
   name: SOURCE_REPO
   required: true
-  value: "https://github.com/appuio/gluster-recycler.git"
+  value: "https://github.com/marcuskara/gluster-recycler.git"
 objects:
 - apiVersion: v1
   kind: ServiceAccount
