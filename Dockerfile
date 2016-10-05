@@ -9,5 +9,6 @@ yum clean all
 
 #ADD jq-linux64 /usr/bin/jq
 ADD recycler.sh /
+RUN chmod +x recycler.sh
 USER 1001
 CMD /recycler.sh
