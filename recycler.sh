@@ -145,7 +145,7 @@ do
       volume_with_status=`echo $vol_list | $JQ '.items['$i']'`
       [[ "$DEBUG" == "true" ]] && echo "Examining the following volume:-"
       [[ "$DEBUG" == "true" ]] && echo "$volume_with_status"
-      vol_name=`echo $volume_with_status | $JQ '.metadata.name'`
+      vol_name=`echo $volume_with_status | $JQ '.spec.glusterfs.path'`
       is_failed=`echo $volume_with_status | $JQ '.status.phase'`
       if [[ "$is_failed" == "Failed" ]]; then
         [[ "$DEBUG" == "true" ]] && echo "Volume $vol_name is in Failed state!"
