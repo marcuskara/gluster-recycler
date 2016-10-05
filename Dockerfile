@@ -1,5 +1,6 @@
 FROM gluster/gluster-centos
 
+RUN yum install -y epel-release
 
 RUN INSTALL_PKGS="bash tar jq" && \
     yum install -y $INSTALL_PKGS && \
